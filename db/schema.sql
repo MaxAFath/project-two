@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS treasure_db;
+
+CREATE DATABASE treasure_db;
