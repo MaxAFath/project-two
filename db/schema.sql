@@ -1,3 +1,3 @@
-DROP DATABASE IF EXISTS treasure_db;
+DROP DATABASE IF EXISTS upcycle_db;
 
-CREATE DATABASE treasure_db;
+CREATE DATABASE upcycle_db;
