@@ -29,6 +29,7 @@ Product.init(
             allowNull: false
         },
         user_id: {
+            type: DataTypes.INTEGER,
             allowNull: false,
             references: {
                 model: 'user',
