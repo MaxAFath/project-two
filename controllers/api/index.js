@@ -7,5 +7,8 @@ const productRoutes = require('./productRoutes.js');
 router.use('/user', userRoutes);
 router.use('/image', imageRotues);
 router.use('/product', productRoutes);
+const userRoutes = require('./userRoutes');
+
+router.use('/users', userRoutes);
 
 module.exports = router;

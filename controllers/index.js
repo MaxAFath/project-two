@@ -8,6 +8,8 @@ const imageRotues = require('./imageRoutes.js');
 router.use('/', )
 router.use('/Product', productRoutes);
 router.use('/User', userRoutes);
+const apiRoutes = require('./api');
+
 router.use('/api', apiRoutes);
 
 module.exports = router;

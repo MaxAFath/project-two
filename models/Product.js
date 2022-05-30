@@ -2,9 +2,6 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-// gets bcrypt for secure password management
-const bcrypt = require('bcrypt');
-
 // creates our user class as an extension of our sql model
 class Product extends Model {}
 
@@ -29,6 +26,7 @@ Product.init(
             allowNull: false
         },
         user_id: {
+            type: DataTypes.INTEGER,
             allowNull: false,
             references: {
                 model: 'user',
