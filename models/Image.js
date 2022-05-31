@@ -2,20 +2,11 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-// gets bcrypt for secure password management
-const bcrypt = require('bcrypt');
-
 // creates our user class as an extension of our sql model
-class User extends Model {
-
-    // tells us if a given password is correct
-    checkPassword(loginPw) {
-        return bcrypt.compareSync(loginPw, this.password);
-    }
-}
+class Image extends Model {}
 
 // sets that tables columns
-User.init(
+Image.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -23,37 +14,26 @@ User.init(
             primaryKey: true,
             autoIncrement: true
         },
-        username: {
+        file_name: {
             type: DataTypes.STRING,
             allowNull: false
         },
-        email: {
-            type: DataTypes.STRING,
+        product_id: {
+            type: DataTypes.INTEGER,
             allowNull: false,
-            unique: true,
-            validate: {
-                isEmail: true
+            references: {
+                model: 'product',
+                key: 'id'
             }
-        },
-        password: {
-            type: DataTypes.STRING,
-            allowNull: false,
-            validate: {
-                len: [8]
-            }
-        },
-        address: {
-            type: DataTypes.STRING
         }
     },
     {
         // Table configuration options
         sequelize,
-        timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'user'
+        modelName: 'image'
     }
 );
 
-module.exports = User;
+module.exports = Image;
