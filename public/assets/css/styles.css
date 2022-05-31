@@ -10,6 +10,12 @@
     color: rgb(185, 182, 182);
   }
   
+  h1 a {
+    color: blue;
+    font-size: 3em;
+    text-align: center;
+  }
+
   a {
     text-decoration: none;
     color: black;
@@ -86,3 +92,6 @@
     padding: 2% 4%;
   }
 
+  .signup-form {
+
+  }
