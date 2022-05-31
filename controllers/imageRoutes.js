@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { Image } = require('../models');
 
-router.use('image/:id', (req, res) => {
+router.use('/:id', (req, res) => {
     Image.findOne({
         where: {
             id: req.params.id
@@ -11,3 +11,5 @@ router.use('image/:id', (req, res) => {
         res.sendFile(file_url);
     })
 })
+
+module.exports = router;
