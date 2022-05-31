@@ -3,7 +3,7 @@ const { Product, User, Image } = require('../models');
 
 router.get('/', (req, res) => {
     Product.findAll({
-        attributes: ['id', 'name', 'create_at'],
+        attributes: ['id', 'name', 'price', 'create_at'],
         order: [['created_at', 'DESC']],
         include: [{
             model: User,
@@ -20,7 +20,26 @@ router.get('/', (req, res) => {
     });
 });
 
-router.get('/product', (req, res) => {
+router.get('/login', (req, res) => {
+    if (req.session.loggedIn) {
+        res.redirtect('/');
+        return;
+    }
+
+    res.render('login');
+});
+
+router.get('/signup', (req, res) => {
+    if (req.session.loggedIn) {
+        res.redirtect('/');
+        return;
+    }
+
+    res.render('signup');
+})
+
+router.get('/product/:id', (req, res) => {
+    
     res.render('product', {});
 });
 
