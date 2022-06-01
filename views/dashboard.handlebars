@@ -1,8 +1,12 @@
-<form ref='uploadForm' 
-      id='uploadForm' 
-      action='http://localhost:3001/api/images/upload' 
-      method='post' 
-      encType="multipart/form-data">
-    <input name="upload" type="file">
-    <button type="submit">Submit</button>
+<form id="product-form">
+  <label for="name">Name: </label>
+  <input name="name" type="text">
+  <label for="description">Description: </label>
+  <textarea name="description" type="text"></textarea>
+  <label for="price">Price: </label>
+  <input name="price" type="number">
+  <label for="upload">Upload an Image?</label>
+  <input name="upload" type="file">
+  <button type="submit">Submit</button>
 </form>
+<script src="/javascript/add-product.js"></script>

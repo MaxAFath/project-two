@@ -3,15 +3,15 @@ const { Product, User, Image } = require('../models');
 
 router.get('/', (req, res) => {
     Product.findAll({
-        attributes: ['id', 'name', 'price', 'create_at'],
+        attributes: ['id', 'name', 'price', 'created_at'],
         order: [['created_at', 'DESC']],
         include: [{
             model: User,
             attributes: ['username']
         }]
     })
-        .then(dbPorductData => {
-            const products = dbPorductData.map(product => product.get({ plain: true }));
+        .then(dbProductData => {
+            const products = dbProductData.map(product => product.get({ plain: true }));
             res.render('homepage', { products, loggedIn: req.session.loggedIn });
         })
         .catch(err => {
