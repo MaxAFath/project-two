@@ -7,7 +7,8 @@ User.hasMany(Product, {
 });
 
 Product.belongsTo(User, {
-    foreignKey: 'user_id'
+    foreignKey: 'user_id',
+    onDelete: 'CASCADE'
 });
 
 Product.hasMany(Image, {
@@ -15,7 +16,8 @@ Product.hasMany(Image, {
 });
 
 Image.belongsTo(Product, {
-    foreignKey: 'product_id'
+    foreignKey: 'product_id',
+    onDelete: 'CASCADE'
 });
 
 module.exports = { User, Product, Image };

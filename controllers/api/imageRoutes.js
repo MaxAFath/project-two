@@ -17,13 +17,13 @@ router.get('/:id', (req, res) => {
 });
 
 router.post('/upload', (req, res) => {
-    console.log(req.files);
+    console.log(req.files.file);
     Image.create({
-        file_name: req.files.upload.name,
-        product_id: 1
+        file_name: req.files.file.name,
+        product_id: req.files.product_id
     })
         .then(dbImageData => {
-            const file = req.files.upload
+            const file = req.files.file
             const fileName = path.resolve(__dirname + '/../../images/' + file.name)
             file.mv(fileName, err => {
                 if (err) {
