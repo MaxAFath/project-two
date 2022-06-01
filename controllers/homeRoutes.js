@@ -55,7 +55,7 @@ router.get('/product/:id', (req, res) => {
         include: [
             {
                 model: Image,
-                attributes: ['id', 'file_name']
+                attributes: ['id', 'product_id']
             },
             {
                 model: User,
