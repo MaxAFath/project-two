@@ -1,24 +1,39 @@
-* {
-    box-sizing: border-box;
+:root {
+    --primary: gray;
+    --secondary: rgb(11, 216, 223);
+    --tertiary: #eaf4f4;
+    --light-dark: #49e1ee;
+    --dark: #0d8888f2;
+    --border-radius: 0.3rem;
+  }
+
+  
+  .navbar {
+    display: flex;
+    width: 100%;
+    position: fixed;
+    background-color: var(--primary);
+  }
+
+  .nav-item {
+    margin: 0 40px;
   }
   
-  body, html {
-    height: 100%;
+  .nav-item a {
+    color: var(--primary);
+  }
+
+  body {
+    height: 40%;
     padding: 0;
     margin: 0;
     font-family: sans-serif;
-    color: rgb(185, 182, 182);
+    color: var(--tertiary);
   }
   
-  h1 a {
-    color: blue;
-    font-size: 3em;
-    text-align: center;
-  }
-
   a {
-    text-decoration: none;
-    color: black;
+    color: var(--dark);
+    font-size: 3em;
     font-weight: bold;
     transition: color .1s;
   }
@@ -64,32 +79,6 @@
   
   form label {
     display: block;
-  }
-
-  .wrapper {
-    width: 100%;
-    min-height: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  header {
-    border-bottom: 1px solid #ccc;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 1%;
-  }
-  
-  header h1 {
-    font-size: 1em;
-  }
-  
-  main {
-    flex: 1;
-    padding: 2% 4%;
   }
 
   .signup-form {
