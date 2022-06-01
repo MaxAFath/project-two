@@ -14,9 +14,10 @@ router.get('/', (req, res) => {
 
 router.post('/', withAuth, (req, res) =>{
     Product.create({
-        product_text: req.body.product_text,
+        name: req.body.name,
         user_id: req.session.user_id,
-        post_id: req.body.post_id
+        description: req.body.description,
+        price: req.body.price
     })
     .then(dbProductData => res.json(dbProductData))
     .catch(err =>{
