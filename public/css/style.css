@@ -2,85 +2,65 @@
     --primary: gray;
     --secondary: rgb(11, 216, 223);
     --tertiary: #eaf4f4;
-    --light-dark: #49e1ee;
+    --light-dark: #1cdac7;
     --dark: #0d8888f2;
     --border-radius: 0.3rem;
   }
 
-  
-  .navbar {
-    display: flex;
-    width: 100%;
-    position: fixed;
-    background-color: var(--primary);
-  }
-
-  .nav-item {
-    margin: 0 40px;
-  }
-  
-  .nav-item a {
-    color: var(--primary);
+  * {
+    margin-left: 2px;
   }
 
   body {
-    height: 40%;
-    padding: 0;
+    background-color: rgb(250, 242, 229);
+  }
+
+  ul {
+    list-style-type: none;
     margin: 0;
-    font-family: sans-serif;
-    color: var(--tertiary);
+    padding: 0;
+  }
+
+  li {
+    display: inline;
+    padding: 5px;
+    text-decoration: none;
   }
   
   a {
-    color: var(--dark);
-    font-size: 3em;
-    font-weight: bold;
+    color: var(--light-dark);
+    font-size: 1.8em;
     transition: color .1s;
+    text-decoration: none;
   }
   
   a:hover {
-    color: gray;
+    color: var(--primary);
   }
   
-  button {
-    background-color: gray;
-    border: 0;
-    padding: 1%;
-    color: white;
+  h1 {
+    font-size: 5em;
+    color: var(--dark);
+    transition: color .1s;
     font-weight: bold;
-    transition: background-color .1s;
-    cursor: pointer;
-    border-radius: 5px;
-  }
-  
-  button:hover {
-    background-color: gray;
   }
 
-  textarea, input {
-    padding: .5%;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+  h1:hover {
+    color: var(--primary);
   }
-  
-  textarea:focus, input:focus {
-    outline: none;
-    border: 1px solid #3486eb;
+
+  h1 p {
+    font-family: 'Caveat', cursive;;
+    margin-left: 25px;
+    margin-top: 2px;
+    font-size: 0.4em;
+    color: var(--primary);
   }
-  
-  textarea {
-    min-width: 40%;
-    min-height: 100px;
+
+  footer {
+    margin-bottom: 5px;
   }
-  
-  form > div {
-    margin-bottom: 2%;
-  }
-  
-  form label {
+
+  .login-form {
     display: block;
-  }
-
-  .signup-form {
-    font-size: 1em;
   }
