@@ -8,7 +8,7 @@ router.get('/:id', (req, res) => {
             id: req.params.id
         }
     }).then(dbImageData => {
-        const fileName = path.resolve(__dirname + '/../../images/' + dbImageData.file_name);
+        const fileName = path.resolve(__dirname + '/../../images/' + dbImageData.id + '.' + dbImageData.file_type.split('/')[1]);
         res.sendFile(fileName);
     }).catch(err => {
         console.log(err);
@@ -17,14 +17,13 @@ router.get('/:id', (req, res) => {
 });
 
 router.post('/upload', (req, res) => {
-    console.log(req.files.file);
     Image.create({
-        file_name: req.files.file.name,
-        product_id: req.files.product_id
+        product_id: req.files.file.name.split('-')[1],
+        file_type: req.files.file.mimetype
     })
         .then(dbImageData => {
-            const file = req.files.file
-            const fileName = path.resolve(__dirname + '/../../images/' + file.name)
+            const file = req.files.file;
+            const fileName = path.resolve(__dirname + '/../../images/' + dbImageData.id + '.' + req.files.file.mimetype.split('/')[1]);
             file.mv(fileName, err => {
                 if (err) {
                     res.status(500).json(err);

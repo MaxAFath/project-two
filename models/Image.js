@@ -14,7 +14,7 @@ Image.init(
             primaryKey: true,
             autoIncrement: true
         },
-        file_name: {
+        file_type: {
             type: DataTypes.STRING,
             allowNull: false
         },
