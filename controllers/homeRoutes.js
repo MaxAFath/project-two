@@ -5,12 +5,20 @@ router.get('/', (req, res) => {
     Product.findAll({
         attributes: ['id', 'name', 'price', 'created_at'],
         order: [['created_at', 'DESC']],
-        include: [{
-            model: User,
-            attributes: ['username']
-        }]
+        include: [
+            {
+                model: User,
+                attributes: ['username']
+            },
+            {
+                model: Image,
+                attributes: ['id', 'product_id']
+            }
+        ]
     })
         .then(dbProductData => {
+            console.log(dbProductData);
+            console.log(dbProductData.images);
             const products = dbProductData.map(product => product.get({ plain: true }));
             res.render('homepage', { products, loggedIn: req.session.loggedIn });
         })

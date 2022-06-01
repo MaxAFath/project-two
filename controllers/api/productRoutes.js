@@ -1,10 +1,21 @@
 const router = require('express').Router();
 const sequelize = require('../../config/connection');
-const { Product } = require('../../models');
+const { Product, Image, User } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 router.get('/', (req, res) => {
-    Product.findAll()
+    Product.findAll({
+        include: [
+            {
+                model: Image,
+                attributes: ['id', 'product_id']
+            },
+            {
+                model: User,
+                attributes: ['username']
+            }
+        ]
+    })
         .then(dbProductData => res.json(dbProductData))
         .catch(err => {
             console.log(err);

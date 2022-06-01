@@ -1,4 +1,10 @@
     <h1>Upcycle
     <p> Where smart thrifters sell and shop</p></h1>
-
+<div>
+    {{#each products as |product| }}
+    <article>
+        {{> product-info product }}
+    </article>
+    {{/each}}
+</div>
   
