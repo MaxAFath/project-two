@@ -57,43 +57,67 @@
     color: var(--primary);
   }
 
-  .form-group {
-    flex-direction: column;
-    display: flex;
-    max-width: 500px;
-    margin-top: 80px;
-    margin-left: 510px;
-    
-  }
 
-
-  .login-form {
-    flex-direction: column;
-    display: flex;
-    max-width: 500px;
-    margin-top: 80px;
-    margin-left: 510px;
-    justify-content: space-around;
-  }
-
-
-  #product-form {
-    flex-direction: column;
-    display: flex;
-    max-width: 500px;
-    margin-top: 80px;
-    margin-left: 510px;
-    
-  }
-
-  h2 {
-    text-align: center;
-    margin-top: 50px;
-    font-size: 3em;
+  /* Cards */
+  .card {
+    margin-left: 38%;
+    font-size: 1.7em;
+    margin-top: 75px;
+    line-height: 60px;
     color: var(--dark);
   }
 
-  p {
+  .card-header {
+    font-size: 2.8em;
+    color: var(--dark);
+    text-decoration: underline;
+    text-decoration-color: var(--light-dark);
+  }
+
+  .btn {
+    background-color: var(--light-dark);
+    color: var(--dark);
+    font-size: 1.0em;
+    border-radius: 25px;
+    border-color: var(--dark);
+  }
+
+  .instead {
+    font-size: 0.6em;
+  }
+
+  #danger {
+    background-color: var(--light-dark);
+    color: var(--dark);
+    font-size: 0.5em;
+    border-radius: 25px;
+    border-color: var(--dark);
+  }
+
+  .card-two {
+    max-width: 800px;
+    margin-left: 30%;
+    line-height: 60px;
+    font-size: 1.7em;
+    color: var(--dark);
+  }
+
+  .card-two h2 p {
+    font-size: 0.3em;
+    text-decoration: none;
+    color: black;
+  }
+
+
+
+  section h2 {
     text-align: center;
-    font-size: 1.5em;
+    color: var(--dark);
+    text-decoration: underline;
+    text-decoration-color: var(--light-dark);
+    font-size: 2.0em;
+  }
+
+  section {
+    align-content: center;
   }
