@@ -15,8 +15,8 @@ router.get('/', withAuth, async (req, res) => {
         }
     });
 
-    const products = dbPostData.map(product => product.get({ plain: true }));
-    const purchases = dbPostData.map(purchase => purchase.get({ plain: true }));
+    const products = dbProductData.map(product => product.get({ plain: true }));
+    const purchases = dbPurchaseData.map(purchase => purchase.get({ plain: true }));
 
     res.render('dashboard', { products, purchases, loggedIn: req.session.loggedIn });
 });
