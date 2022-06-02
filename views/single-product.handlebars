@@ -1,0 +1,6 @@
+{{#if product.images.[0]}}
+<img src="/api/images/{{ product.images.0.id }}">
+{{/if}}
+<h2>{{ product.name }} - ${{ product.price }}</h2>
+<p>Posted by {{ product.user.username }}</p>
+<p>{{ product.description }}</p>
