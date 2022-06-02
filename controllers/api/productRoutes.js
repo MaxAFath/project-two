@@ -54,6 +54,32 @@ router.post('/purchase/:id', withAuth, (req, res) => {
         });
 });
 
+router.put('/:id', async (req, res) => {
+    try {
+        const dbProductData = await Product.findOne({
+            where: {
+                id: req.params.id
+            }
+        })
+        if (!dbProductData) {
+            res.status(404).json({ message: 'Product not found' });
+        } else if (req.session.user_id === dbProductData.user_id) {
+            const dbUpdateData = await Product.update(req.body, {
+                individualHooks: true,
+                where: {
+                    id: req.params.id
+                }
+            });
+            res.json(dbUpdateData);
+        } else {
+            res.status(401).json({ message: 'You must be logged in to make these changes' });
+        }
+    } catch (err) {
+        console.log(err);
+        res.status(500).json(err);
+    }
+});
+
 router.delete('/:id', withAuth, (req, res) => {
     Product.destroy({
         where: {
