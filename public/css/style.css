@@ -23,7 +23,7 @@
 
   li {
     display: inline;
-    padding: 5px;
+    padding: 7px;
     text-decoration: none;
   }
   
@@ -57,10 +57,43 @@
     color: var(--primary);
   }
 
-  footer {
-    margin-bottom: 5px;
+  .form-group {
+    flex-direction: column;
+    display: flex;
+    max-width: 500px;
+    margin-top: 80px;
+    margin-left: 510px;
+    
   }
 
+
   .login-form {
-    display: block;
+    flex-direction: column;
+    display: flex;
+    max-width: 500px;
+    margin-top: 80px;
+    margin-left: 510px;
+    justify-content: space-around;
+  }
+
+
+  #product-form {
+    flex-direction: column;
+    display: flex;
+    max-width: 500px;
+    margin-top: 80px;
+    margin-left: 510px;
+    
+  }
+
+  h2 {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 3em;
+    color: var(--dark);
+  }
+
+  p {
+    text-align: center;
+    font-size: 1.5em;
   }
