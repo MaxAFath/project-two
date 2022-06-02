@@ -13,9 +13,9 @@
 </section>
 
 <section>
-  <h2>Purchases</h2>
-  {{#each}}
-    
+  <h2>Listings</h2>
+  {{#each products as |product| }}
+    {{> product-info product}}
   {{/each}}
 </section>
 <script src="/javascript/add-product.js"></script>

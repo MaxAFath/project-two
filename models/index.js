@@ -30,4 +30,9 @@ Purchase.belongsTo(Product, {
     onDelete: 'CASCADE'
 });
 
+Purchase.belongsTo(User, {
+    foreignKey: 'user_id',
+    onDelete: 'CASCADE'
+})
+
 module.exports = { User, Product, Image, Purchase };
