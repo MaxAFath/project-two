@@ -1,19 +1,29 @@
-<div class="container"
+<div class="container">
 <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
                 <a class="nav-link" href="/">Home</a>
             </li>
+            {{#if loggedIn}}
             <li class="nav-item active">
                 <a class="nav-link" href="/dashboard">Dashboard</a>
             </li>
+            <li>
+                <a class="nav-link" href="/logout">Logout</a>
+            </li>
+            {{else}}
             <li class="nav-item active">
                 <a class="nav-link" href="/signup">Sign Up</a>
             </li>
             <li class="nav-item active">
                 <a class="nav-link" href="/login">Login</a>
             </li>
+            {{/if}}
         </ul>
     </div>
 </nav>
+{{#if loggedIn}}
+<script src="/public/javascript/logout.js"></script>
+{{else}}
 <script src="/public/javascript/login.js"></script>
+{{/if}}

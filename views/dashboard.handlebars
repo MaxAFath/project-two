@@ -37,4 +37,10 @@
     {{> product-info product}}
   {{/each}}
 </section>
+<section>
+  <h2>Purchases</h2>
+  {{#each purchases as |purchase| }}
+    {{> product-info purchase.product }}
+  {{/each}}
+</section>
 <script src="/javascript/add-product.js"></script>
