@@ -1,31 +1,32 @@
 <div class="card-two">
   <h2 class="card-header">Seller Dashboard
-  <p>Please enter the information about the product you are selling</p></h2>
+    <p>Please enter the information about the product you are selling</p>
+  </h2>
   <form id="product-form">
-    
-  <div class="form-group">
-    <label for="name">Name:</label>
-    <input name="name" type="text">
-  </div>
 
-  <div class="form-group">
-    <label for="description">Description:</label>
-    <textarea name="description" type="text"></textarea>
-  </div>
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input name="name" type="text">
+    </div>
 
-  <div class="form-group">
-    <label for="price">Price:</label>
-    <input name="price" type="number" step="any">
-  </div>
+    <div class="form-group">
+      <label for="description">Description:</label>
+      <textarea name="description" type="text"></textarea>
+    </div>
 
-  <div class="form-group">
-    <label for="upload">Upload an Image?</label>
-    <input name="upload" type="file">
-  </div>
+    <div class="form-group">
+      <label for="price">Shipping Price:</label>
+      <input name="price" type="number" step="any">
+    </div>
 
-  <div class="form-group">
-    <button class="btn" type="submit">Submit</button>
-  </div>
+    <div class="form-group">
+      <label for="upload">Upload an Image?</label>
+      <input name="upload" type="file">
+    </div>
+
+    <div class="form-group">
+      <button class="btn" type="submit">Submit</button>
+    </div>
 
   </form>
 
@@ -34,18 +35,20 @@
 <section>
   <h2>Listings</h2>
   {{#each products as |product| }}
-    {{> product-info product}}
+  {{> product-info product}}
   {{/each}}
 </section>
 <section>
   <h2>Purchases</h2>
   {{#each purchases as |purchase| }}
-    {{> product-info purchase.product }}
+  {{> product-info purchase.product }}
   {{/each}}
 </section>
 
-<div class="logo"><span style="font-size:50px; font-weight:lighter; color:#1cdac7">&#8625;</span>Upcycle<span style="font-size:50px; font-weight:lighter; color:#1cdac7">&#8624;</span>
-<p> Where smart shoppers thrift</p></div>
+<div class="logo"><span style="font-size:50px; font-weight:lighter; color:#1cdac7">&#8625;</span>Upcycle<span
+    style="font-size:50px; font-weight:lighter; color:#1cdac7">&#8624;</span>
+  <p> Where smart shoppers thrift</p>
+</div>
 
 
 <script src="/javascript/add-product.js"></script>
