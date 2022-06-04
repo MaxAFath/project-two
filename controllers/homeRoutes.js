@@ -30,7 +30,7 @@ router.get('/', (req, res) => {
 
 router.get('/login', (req, res) => {
     if (req.session.loggedIn) {
-        res.redirtect('/');
+        res.redirect('/');
         return;
     }
 
@@ -39,7 +39,7 @@ router.get('/login', (req, res) => {
 
 router.get('/signup', (req, res) => {
     if (req.session.loggedIn) {
-        res.redirtect('/');
+        res.redirect('/');
         return;
     }
 
