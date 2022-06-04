@@ -4,5 +4,7 @@
 <h2>{{ product.name }} - ${{ product.price }}</h2>
 <p>Posted by {{ product.user.username }}</p>
 <p>{{ product.description }}</p>
+{{#if loggedIn}}
 <button class="purchase">Purchase</button>
+{{/if}}
 <script src="/javascript/purchase.js"></script>
