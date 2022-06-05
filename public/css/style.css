@@ -7,30 +7,33 @@
     --border-radius: 0.3rem;
   }
 
-  * {
-    margin-left: 2px;
+
+  .navigate {
+    overflow: hidden;
+    background-color: #c0e9e4;
+    height: 90px;
   }
 
   body {
     background-color: rgb(250, 242, 229);
   }
 
+
   ul {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
+    text-align: center;
   }
 
   li {
     display: inline;
-    padding: 7px;
+    padding: 35px;
     text-decoration: none;
   }
   
   a {
     color: var(--dark);
-    font-weight: bold;
-    font-size: 1.8em;
+    font-weight: bolder;
+    font-size: 2.2em;
     transition: color .1s;
     text-decoration: none;
     font-family: 'Roboto Condensed', sans-serif;
@@ -41,8 +44,9 @@
   }
   
   h1 {
+    text-align: center;
     margin-top: 5px;
-    font-size: 5em;
+    font-size: 6em;
     color: var(--dark);
     transition: color .1s;
     font-family: 'Lato', sans-serif;
@@ -104,7 +108,7 @@
 
   .card-two {
     max-width: 800px;
-    margin-left: 30%;
+    margin-left: 32%;
     line-height: 60px;
     font-size: 1.7em;
     color: var(--dark);
@@ -118,34 +122,41 @@
     font-family: 'Roboto Condensed', sans-serif;
   }
 
-
-
-  section h2 {
+  .list h2, .purchase h2 {
     text-align: center;
+    font-family: 'Roboto Condensed', sans-serif;
     color: var(--dark);
+    font-size: 2.5em;
     font-weight: bold;
     text-decoration: underline;
     text-decoration-color: var(--light-dark);
-    font-size: 2.0em;
-    font-family: 'Roboto Condensed', sans-serif;
   }
 
-  section {
-    align-content: center;
+  .list img {
+    height: 150px;
+    display:table-row-group;
+    
+    margin-left: auto;  
+    margin-right: auto;
+  }
+
+
+  .handle-list, .handle-purchase {
+    font-size: 0.2em;
   }
 
   .logo {
-    position: fixed;
-    top: 5px;
+    position: absolute;
+    top: 3px;
+    right: 8px;
     font-size: 2em;
     font-family: 'Lato', sans-serif;
     color: var(--dark);
-    left: 85%;
   }
 
   .logo p {
     font-family: 'Caveat', cursive;;
-    margin-left: 25%;
+    margin-left: 10%;
     margin-top: -5px;
     font-size: 0.4em;
     color: var(--primary);

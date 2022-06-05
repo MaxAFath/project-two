@@ -1,6 +1,6 @@
 <div class="card-two">
   <h2 class="card-header">Seller Dashboard
-    <p>Please enter the information about the product you are selling</p>
+    <p>Please enter information about the item you are upcycling</p>
   </h2>
   <form id="product-form">
 
@@ -32,22 +32,28 @@
 
 </div>
 
-<section>
+
+<section class="list">
   <h2>Listings</h2>
+  <div class="handle-list"
   {{#each products as |product| }}
   {{> product-info product}}
   {{/each}}
+  </div>
 </section>
-<section>
+
+<section class="purchase">
   <h2>Purchases</h2>
+  <div class="handle-purchase">
   {{#each purchases as |purchase| }}
   {{> product-info purchase.product }}
   {{/each}}
+  </div>
 </section>
 
 <div class="logo"><span style="font-size:50px; font-weight:lighter; color:#1cdac7">&#8625;</span>Upcycle<span
     style="font-size:50px; font-weight:lighter; color:#1cdac7">&#8624;</span>
-  <p> Where smart shoppers thrift</p>
+  <p> The ultimate thrifting experience</p>
 </div>
 
 
