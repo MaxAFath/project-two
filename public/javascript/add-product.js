@@ -25,6 +25,10 @@ const handleNewProduct = async function (event) {
         method: 'POST',
         body: formData
     });
+
+    if (fileResponse && response) {
+        window.location.reload();
+    }
 }
 
 document.querySelector('#product-form').addEventListener('submit', handleNewProduct);
