@@ -1,6 +1,6 @@
 const product_id = window.location.href.split('/')[window.location.href.split('/').length - 1]
 
-const handlePuchase = function() {
+const handlePurchase = function() {
     fetch('/api/products/purchase/' + product_id, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json'}
@@ -16,4 +16,4 @@ const handlePuchase = function() {
 
 
 
-document.querySelector('.purchase').addEventListener('click', handlePuchase);
+document.querySelector('.purchase-button').addEventListener('click', handlePurchase);
