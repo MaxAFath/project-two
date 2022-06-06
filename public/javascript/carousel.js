@@ -46,7 +46,7 @@
                 clearInterval(self.timer);
                 self.timer = null;
             }, false);
-            self.el.addEventListener("mouseout", function(){
+            self.el.addEventListener("mouseout", function () {
                 self.action();
             }, false);
         }
@@ -54,7 +54,7 @@
 
     };
 
-    document.addEventListener('DOMContentLoaded', function(){
+    document.addEventListener('DOMContentLoaded', function () {
         var slider = new Slideshow("#main-slider");
     });
 })();
