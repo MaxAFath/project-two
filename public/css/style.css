@@ -8,14 +8,18 @@
   }
 
 
-  .navigate {
-    overflow: hidden;
-    background-color: #c0e9e4;
-    height: 90px;
-  }
-
   body {
     background-color: rgb(250, 242, 229);
+  }
+
+  /* Homepage styling */
+  .navigate {
+    background-color: #c3f9f3;
+    height: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-between;
   }
 
 
@@ -58,7 +62,7 @@
 
   h1 p {
     font-family: 'Caveat', cursive;;
-    margin-left: 10%;
+    margin-left: 15%;
     margin-top: -20px;
     font-size: 0.4em;
     color: var(--primary);
@@ -90,6 +94,7 @@
     border-radius: 25px;
     border-color: var(--dark);
     font-family: 'Roboto Condensed', sans-serif;
+    cursor: pointer;
   }
 
   .instead {
@@ -104,6 +109,7 @@
     border-radius: 25px;
     border-color: var(--dark);
     font-family: 'Roboto Condensed', sans-serif;
+    cursor: pointer;
   }
 
   .card-two {
@@ -132,7 +138,7 @@
     text-decoration-color: var(--light-dark);
   }
 
-  .list img {
+  .list img, .purchase img {
     height: 150px;
     display:table-row-group;
     
@@ -143,12 +149,43 @@
 
   .handle-list, .handle-purchase {
     font-size: 0.2em;
+    text-align: center;
+  }
+
+  .single-product {
+    text-align: center;
+    font-size: 1.0em;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: var(--dark);
+  }
+
+  .purchase-button {
+    background-color: var(--light-dark);
+    color: var(--dark);
+    font-size: 1.5em;
+    border-radius: 25px;
+    border-color: var(--dark);
+    font-family: 'Roboto Condensed', sans-serif;
+    cursor: pointer;
+    
+  }
+
+  .single-product img {
+    height: 250px;
+    display: table-row-group;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .handle-user {
+    text-align: center;
+    font-size: 0.6em;
   }
 
   .logo {
     position: absolute;
-    top: 3px;
-    right: 8px;
+    top: 5px;
+    right: 30px;
     font-size: 2em;
     font-family: 'Lato', sans-serif;
     color: var(--dark);
@@ -160,4 +197,54 @@
     margin-top: -5px;
     font-size: 0.4em;
     color: var(--primary);
+  }
+
+  @media screen and (max-width: 769px) {
+    
+
+    li {
+      display: table-row;
+    }
+
+    a {
+      font-size: 1.2em;
+    }
+
+    .logo {
+      font-size: 1.9em;
+      margin-top: 10px;
+      margin-right: 15px;
+    }
+
+    .logo p {
+      margin-left: 8%;
+    }
+
+    .card-two {
+      margin-left: 5px;
+      font-size: 1.2em;
+      line-height: 40px;
+    }
+
+    .card-header {
+      font-size: 2.0em;
+      text-align: center;
+      
+    }
+
+    .card {
+      margin-left: 5px;
+      font-size: 1.2em;
+      margin-top: 75px;
+      line-height: 40px;
+    }
+
+    h1 {
+      font-size: 3.3em;
+    }
+
+    h1 p {
+      margin-left: 3%;
+    }
+
   }
