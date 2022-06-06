@@ -13,3 +13,5 @@ The following were used to build this application:
 ## Application Website
 https://upcycle-store.herokuapp.com/
 ## Images of the application
+![image3](https://user-images.githubusercontent.com/96963955/172195314-b6291879-a84a-4fa4-9b37-6b523e4263b1.png)
+![image1](https://user-images.githubusercontent.com/96963955/172195332-931d9371-e93e-4fa6-8eb9-cf31b915e6e7.png)
