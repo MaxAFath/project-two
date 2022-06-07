@@ -7,6 +7,8 @@ const handlePurchase = function() {
     }).then(response => {
         if(response.ok) {
             location.reload();
+        } else {
+            alert('Something Went Wrong. Product May Have Been Purchased Previously.');
         }
     })
 }
