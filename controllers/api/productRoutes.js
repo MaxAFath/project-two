@@ -50,7 +50,7 @@ router.post('/purchase/:id', withAuth, (req, res) => {
     })
         .catch(err => {
             console.log(err);
-            console.log(400).json(err);
+            res.json(err);
         });
 });
 
